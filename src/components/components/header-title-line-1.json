@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_components_header_title_line_1s",
+  "info": {
+    "displayName": "home_page_header",
+    "icon": "bold",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header_title_line_2": {
+      "type": "string",
+      "required": true
+    },
+    "header_description": {
+      "type": "text",
+      "required": true
+    },
+    "header_input_button_text": {
+      "type": "string",
+      "required": true
+    },
+    "header_title_line_1": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
