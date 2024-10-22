@@ -22,6 +22,9 @@
     "header_title_line_1": {
       "type": "string",
       "required": true
+    },
+    "header_try_now_title": {
+      "type": "string"
     }
   }
 }

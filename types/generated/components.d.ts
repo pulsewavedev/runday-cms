@@ -65,6 +65,7 @@ export interface ComponentsHeaderTitleLine1 extends Struct.ComponentSchema {
     header_input_button_text: Schema.Attribute.String &
       Schema.Attribute.Required;
     header_title_line_1: Schema.Attribute.String & Schema.Attribute.Required;
+    header_try_now_title: Schema.Attribute.String;
   };
 }
 
