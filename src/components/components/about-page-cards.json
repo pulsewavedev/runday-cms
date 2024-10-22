@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_components_about_page_cards",
+  "info": {
+    "displayName": "about_page_card",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "linkedin_url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

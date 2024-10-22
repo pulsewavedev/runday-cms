@@ -4,7 +4,8 @@
   "info": {
     "singularName": "home",
     "pluralName": "homes",
-    "displayName": "home"
+    "displayName": "home",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +15,8 @@
     "header": {
       "type": "component",
       "repeatable": false,
-      "component": "components.header-title-line-1"
+      "component": "components.header-title-line-1",
+      "required": true
     }
   }
 }

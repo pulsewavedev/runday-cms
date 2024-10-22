@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_components_section_headers",
+  "info": {
+    "displayName": "section_header",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
