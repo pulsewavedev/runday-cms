@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_components_logo_walls",
+  "info": {
+    "displayName": "logo_wall"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "displayName": "title",
+      "type": "component",
+      "repeatable": false,
+      "component": "components.title"
+    },
+    "logos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.logo-wall-item",
+      "required": true,
+      "min": 1
+    }
+  }
+}

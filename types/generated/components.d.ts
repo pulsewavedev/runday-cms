@@ -1,5 +1,14 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface ComponentsTitle extends Struct.ComponentSchema {
+  collectionName: 'components_components_titles';
+  info: {
+    displayName: 'title';
+    icon: 'bold';
+  };
+  attributes: {};
+}
+
 export interface ComponentsSectionHeader extends Struct.ComponentSchema {
   collectionName: 'components_components_section_headers';
   info: {
@@ -9,6 +18,37 @@ export interface ComponentsSectionHeader extends Struct.ComponentSchema {
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ComponentsLogoWall extends Struct.ComponentSchema {
+  collectionName: 'components_components_logo_walls';
+  info: {
+    displayName: 'logo_wall';
+  };
+  attributes: {
+    title: Schema.Attribute.Component<'components.title', false>;
+    logos: Schema.Attribute.Component<'components.logo-wall-item', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+  };
+}
+
+export interface ComponentsLogoWallItem extends Struct.ComponentSchema {
+  collectionName: 'components_components_logo_wall_items';
+  info: {
+    displayName: 'logo_wall_item';
+    icon: 'file';
+  };
+  attributes: {
+    image_url: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'#'>;
   };
 }
 
@@ -46,7 +86,10 @@ export interface ComponentsAboutPageCards extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'components.title': ComponentsTitle;
       'components.section-header': ComponentsSectionHeader;
+      'components.logo-wall': ComponentsLogoWall;
+      'components.logo-wall-item': ComponentsLogoWallItem;
       'components.header-title-line-1': ComponentsHeaderTitleLine1;
       'components.about-page-cards': ComponentsAboutPageCards;
     }

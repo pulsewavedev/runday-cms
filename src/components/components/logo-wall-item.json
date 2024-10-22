@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_components_logo_wall_items",
+  "info": {
+    "displayName": "logo_wall_item",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "image_url": {
+      "type": "string",
+      "required": true,
+      "default": "#"
+    }
+  }
+}
