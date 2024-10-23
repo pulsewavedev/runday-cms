@@ -69,6 +69,43 @@ export interface ComponentsHeaderTitleLine1 extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsFeatureCard extends Struct.ComponentSchema {
+  collectionName: 'components_components_feature_cards';
+  info: {
+    displayName: 'feature_card';
+    icon: 'discuss';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    tab_title: Schema.Attribute.String & Schema.Attribute.Required;
+    button_text: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Talk to Sales'>;
+    image_url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ComponentsFeatureCardSection extends Struct.ComponentSchema {
+  collectionName: 'components_components_feature_card_sections';
+  info: {
+    displayName: 'feature_card_section';
+  };
+  attributes: {
+    header_title_line_1: Schema.Attribute.String & Schema.Attribute.Required;
+    header_title_line_2: Schema.Attribute.String & Schema.Attribute.Required;
+    header_description: Schema.Attribute.Text & Schema.Attribute.Required;
+    tabs: Schema.Attribute.Component<'components.feature-card', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+  };
+}
+
 export interface ComponentsAboutPageCards extends Struct.ComponentSchema {
   collectionName: 'components_components_about_page_cards';
   info: {
@@ -92,6 +129,8 @@ declare module '@strapi/strapi' {
       'components.logo-wall': ComponentsLogoWall;
       'components.logo-wall-item': ComponentsLogoWallItem;
       'components.header-title-line-1': ComponentsHeaderTitleLine1;
+      'components.feature-card': ComponentsFeatureCard;
+      'components.feature-card-section': ComponentsFeatureCardSection;
       'components.about-page-cards': ComponentsAboutPageCards;
     }
   }

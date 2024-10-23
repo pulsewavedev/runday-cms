@@ -4,11 +4,11 @@
         "colId": "history",
         "containerId": "",
         "name": "https://cms.runday.us/api/home",
-        "url": "http://127.0.0.1:1337/api/home?populate=*",
+        "url": "https://cms.runday.us/api/blogs?populate=*",
         "method": "GET",
         "sortNum": 0,
         "created": "2024-10-21T12:49:48.799Z",
-        "modified": "2024-10-22T14:03:37.406Z",
+        "modified": "2024-10-23T09:42:33.445Z",
         "headers": [],
         "params": [
             {

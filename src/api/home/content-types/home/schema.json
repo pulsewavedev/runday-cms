@@ -17,6 +17,12 @@
       "repeatable": false,
       "component": "components.header-title-line-1",
       "required": true
+    },
+    "features": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.feature-card-section",
+      "required": true
     }
   }
 }

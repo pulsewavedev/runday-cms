@@ -582,6 +582,11 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       false
     > &
       Schema.Attribute.Required;
+    features: Schema.Attribute.Component<
+      'components.feature-card-section',
+      false
+    > &
+      Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

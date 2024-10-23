@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_components_feature_card_sections",
+  "info": {
+    "displayName": "feature_card_section"
+  },
+  "options": {},
+  "attributes": {
+    "header_title_line_1": {
+      "type": "string",
+      "required": true
+    },
+    "header_title_line_2": {
+      "type": "string",
+      "required": true
+    },
+    "header_description": {
+      "type": "text",
+      "required": true
+    },
+    "tabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.feature-card",
+      "required": true,
+      "min": 1
+    }
+  }
+}

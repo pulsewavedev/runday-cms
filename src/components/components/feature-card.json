@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_components_feature_cards",
+  "info": {
+    "displayName": "feature_card",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "tab_title": {
+      "type": "string",
+      "required": true
+    },
+    "button_text": {
+      "type": "string",
+      "required": true,
+      "default": "Talk to Sales"
+    },
+    "image_url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
