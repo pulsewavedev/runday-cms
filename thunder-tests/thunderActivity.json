@@ -4,15 +4,20 @@
         "colId": "history",
         "containerId": "",
         "name": "https://cms.runday.us/api/home",
-        "url": "https://cms.runday.us/api/blogs?populate=*",
+        "url": "https://cms.runday.us/api/home?populate[reviews][populate]=*&populate[features][populate]=*",
         "method": "GET",
         "sortNum": 0,
         "created": "2024-10-21T12:49:48.799Z",
-        "modified": "2024-10-23T09:42:33.445Z",
+        "modified": "2024-10-23T11:20:31.838Z",
         "headers": [],
         "params": [
             {
-                "name": "populate",
+                "name": "populate[reviews][populate]",
+                "value": "*",
+                "isPath": false
+            },
+            {
+                "name": "populate[features][populate]",
                 "value": "*",
                 "isPath": false
             }

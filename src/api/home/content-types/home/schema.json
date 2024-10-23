@@ -29,6 +29,12 @@
       "repeatable": false,
       "component": "components.reviews-section",
       "required": true
+    },
+    "kpi": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.kpi-section",
+      "required": true
     }
   }
 }
