@@ -21,6 +21,65 @@ export interface ComponentsSectionHeader extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsReviewsSection extends Struct.ComponentSchema {
+  collectionName: 'components_components_reviews_sections';
+  info: {
+    displayName: 'reviews_section';
+    description: '';
+  };
+  attributes: {
+    header_title_line_1: Schema.Attribute.String & Schema.Attribute.Required;
+    header_title_line_2: Schema.Attribute.String & Schema.Attribute.Required;
+    header_description: Schema.Attribute.String & Schema.Attribute.Required;
+    button_text: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<"Let's talk">;
+    button_url: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'https://api.whatsapp.com/send/?phone=18324919670&text&type=phone_number&app_absent=0'>;
+    reviews: Schema.Attribute.Component<'components.review-card', true>;
+  };
+}
+
+export interface ComponentsReviewDetailCard extends Struct.ComponentSchema {
+  collectionName: 'components_components_review_detail_cards';
+  info: {
+    displayName: 'review_detail_card';
+  };
+  attributes: {
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    image_url: Schema.Attribute.String & Schema.Attribute.Required;
+    review_text: Schema.Attribute.Text;
+    position: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'CEO'>;
+    logo_url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ComponentsReviewCard extends Struct.ComponentSchema {
+  collectionName: 'components_components_review_cards';
+  info: {
+    displayName: 'review_card';
+    description: '';
+  };
+  attributes: {
+    video_url: Schema.Attribute.String;
+    image_url: Schema.Attribute.String;
+    kpi: Schema.Attribute.Component<'components.kpi-card', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 2;
+          max: 2;
+        },
+        number
+      >;
+    review: Schema.Attribute.Component<'components.review-detail-card', false> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface ComponentsLogoWall extends Struct.ComponentSchema {
   collectionName: 'components_components_logo_walls';
   info: {
@@ -49,6 +108,31 @@ export interface ComponentsLogoWallItem extends Struct.ComponentSchema {
     image_url: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'#'>;
+  };
+}
+
+export interface ComponentsKpiSection extends Struct.ComponentSchema {
+  collectionName: 'components_components_kpi_sections';
+  info: {
+    displayName: 'kpi_section';
+  };
+  attributes: {
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<' Supercharge Your Sales with Revolutionary AI Funnels'>;
+    kpi: Schema.Attribute.Component<'components.kpi-card', true>;
+  };
+}
+
+export interface ComponentsKpiCard extends Struct.ComponentSchema {
+  collectionName: 'components_components_kpi_cards';
+  info: {
+    displayName: 'kpi_card';
+  };
+  attributes: {
+    statistic: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    icon_url: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -126,8 +210,13 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'components.title': ComponentsTitle;
       'components.section-header': ComponentsSectionHeader;
+      'components.reviews-section': ComponentsReviewsSection;
+      'components.review-detail-card': ComponentsReviewDetailCard;
+      'components.review-card': ComponentsReviewCard;
       'components.logo-wall': ComponentsLogoWall;
       'components.logo-wall-item': ComponentsLogoWallItem;
+      'components.kpi-section': ComponentsKpiSection;
+      'components.kpi-card': ComponentsKpiCard;
       'components.header-title-line-1': ComponentsHeaderTitleLine1;
       'components.feature-card': ComponentsFeatureCard;
       'components.feature-card-section': ComponentsFeatureCardSection;

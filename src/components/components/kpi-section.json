@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_components_kpi_sections",
+  "info": {
+    "displayName": "kpi_section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": " Supercharge Your Sales with Revolutionary AI Funnels"
+    },
+    "kpi": {
+      "displayName": "kpi_card",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.kpi-card"
+    }
+  }
+}

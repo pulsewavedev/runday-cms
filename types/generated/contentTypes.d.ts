@@ -587,6 +587,8 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       false
     > &
       Schema.Attribute.Required;
+    reviews: Schema.Attribute.Component<'components.reviews-section', false> &
+      Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

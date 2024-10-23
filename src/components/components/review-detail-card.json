@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_components_review_detail_cards",
+  "info": {
+    "displayName": "review_detail_card"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image_url": {
+      "type": "string",
+      "required": true
+    },
+    "review_text": {
+      "type": "text"
+    },
+    "position": {
+      "type": "string",
+      "required": true,
+      "default": "CEO"
+    },
+    "logo_url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

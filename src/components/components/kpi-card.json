@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_components_kpi_cards",
+  "info": {
+    "displayName": "kpi_card"
+  },
+  "options": {},
+  "attributes": {
+    "statistic": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "icon_url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

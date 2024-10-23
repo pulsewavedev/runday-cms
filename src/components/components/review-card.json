@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_components_review_cards",
+  "info": {
+    "displayName": "review_card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "video_url": {
+      "type": "string",
+      "required": false
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "kpi": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.kpi-card",
+      "required": true,
+      "max": 2,
+      "min": 2
+    },
+    "review": {
+      "displayName": "review_detail_card",
+      "type": "component",
+      "repeatable": false,
+      "component": "components.review-detail-card",
+      "required": true
+    }
+  }
+}

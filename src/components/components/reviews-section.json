@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_components_reviews_sections",
+  "info": {
+    "displayName": "reviews_section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header_title_line_1": {
+      "type": "string",
+      "required": true
+    },
+    "header_title_line_2": {
+      "type": "string",
+      "required": true
+    },
+    "header_description": {
+      "type": "string",
+      "required": true
+    },
+    "button_text": {
+      "type": "string",
+      "default": "Let's talk",
+      "required": true
+    },
+    "button_url": {
+      "type": "string",
+      "required": true,
+      "default": "https://api.whatsapp.com/send/?phone=18324919670&text&type=phone_number&app_absent=0"
+    },
+    "reviews": {
+      "displayName": "review_card",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.review-card"
+    }
+  }
+}

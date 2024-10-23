@@ -23,6 +23,12 @@
       "repeatable": false,
       "component": "components.feature-card-section",
       "required": true
+    },
+    "reviews": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.reviews-section",
+      "required": true
     }
   }
 }
