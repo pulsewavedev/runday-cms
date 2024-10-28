@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "pricing_pages",
+  "info": {
+    "singularName": "pricing-page",
+    "pluralName": "pricing-pages",
+    "displayName": "PricingPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Choose The Right Plan"
+    },
+    "description": {
+      "type": "text",
+      "default": "Explore our plans and choose the ideal one for you. Want something different? Contact us to tailor your subscription for a perfect match.",
+      "required": true
+    },
+    "annual_plans": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.pricing-card",
+      "required": true,
+      "min": 1,
+      "max": 4
+    },
+    "monthly_plans": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.pricing-card",
+      "required": true,
+      "min": 1,
+      "max": 4
+    }
+  }
+}

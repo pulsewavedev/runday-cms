@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_components_client_cards",
+  "info": {
+    "displayName": "client_card"
+  },
+  "options": {},
+  "attributes": {
+    "image_url": {
+      "type": "string",
+      "required": true,
+      "default": "https://placehold.co/386x330.png"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

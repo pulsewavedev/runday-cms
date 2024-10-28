@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_components_pricing_cards",
+  "info": {
+    "displayName": "pricing_card"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    },
+    "price_description": {
+      "type": "string",
+      "required": true
+    },
+    "features": {
+      "displayName": "pricing_feature",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.pricing-feature",
+      "min": 1,
+      "required": true
+    },
+    "button_text": {
+      "type": "string",
+      "default": "Talk to Sales",
+      "required": true
+    }
+  }
+}

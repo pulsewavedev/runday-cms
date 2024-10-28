@@ -80,6 +80,40 @@ export interface ComponentsReviewCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsPricingFeature extends Struct.ComponentSchema {
+  collectionName: 'components_components_pricing_features';
+  info: {
+    displayName: 'pricing_feature';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ComponentsPricingCard extends Struct.ComponentSchema {
+  collectionName: 'components_components_pricing_cards';
+  info: {
+    displayName: 'pricing_card';
+  };
+  attributes: {
+    type: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    price: Schema.Attribute.String & Schema.Attribute.Required;
+    price_description: Schema.Attribute.String & Schema.Attribute.Required;
+    features: Schema.Attribute.Component<'components.pricing-feature', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    button_text: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Talk to Sales'>;
+  };
+}
+
 export interface ComponentsLogoWall extends Struct.ComponentSchema {
   collectionName: 'components_components_logo_walls';
   info: {
@@ -190,6 +224,20 @@ export interface ComponentsFeatureCardSection extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsClientCard extends Struct.ComponentSchema {
+  collectionName: 'components_components_client_cards';
+  info: {
+    displayName: 'client_card';
+  };
+  attributes: {
+    image_url: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'https://placehold.co/386x330.png'>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
 export interface ComponentsAboutPageCards extends Struct.ComponentSchema {
   collectionName: 'components_components_about_page_cards';
   info: {
@@ -213,6 +261,8 @@ declare module '@strapi/strapi' {
       'components.reviews-section': ComponentsReviewsSection;
       'components.review-detail-card': ComponentsReviewDetailCard;
       'components.review-card': ComponentsReviewCard;
+      'components.pricing-feature': ComponentsPricingFeature;
+      'components.pricing-card': ComponentsPricingCard;
       'components.logo-wall': ComponentsLogoWall;
       'components.logo-wall-item': ComponentsLogoWallItem;
       'components.kpi-section': ComponentsKpiSection;
@@ -220,6 +270,7 @@ declare module '@strapi/strapi' {
       'components.header-title-line-1': ComponentsHeaderTitleLine1;
       'components.feature-card': ComponentsFeatureCard;
       'components.feature-card-section': ComponentsFeatureCardSection;
+      'components.client-card': ComponentsClientCard;
       'components.about-page-cards': ComponentsAboutPageCards;
     }
   }
