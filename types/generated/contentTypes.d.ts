@@ -571,6 +571,7 @@ export interface ApiClientsPageClientsPage extends Struct.SingleTypeSchema {
     singularName: 'clients-page';
     pluralName: 'clients-pages';
     displayName: 'ClientsPage';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -590,6 +591,7 @@ export interface ApiClientsPageClientsPage extends Struct.SingleTypeSchema {
         },
         number
       >;
+    reviews: Schema.Attribute.Component<'components.reviews-section', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

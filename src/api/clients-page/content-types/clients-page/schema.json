@@ -4,7 +4,8 @@
   "info": {
     "singularName": "clients-page",
     "pluralName": "clients-pages",
-    "displayName": "ClientsPage"
+    "displayName": "ClientsPage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -27,6 +28,11 @@
       "component": "components.client-card",
       "required": true,
       "min": 1
+    },
+    "reviews": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.reviews-section"
     }
   }
 }
