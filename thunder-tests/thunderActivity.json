@@ -4,11 +4,27 @@
         "colId": "history",
         "containerId": "",
         "name": "https://cms.runday.us/api/home",
-        "url": "https://cms.runday.us/api/home?populate[features][populate]=*&populate[kpi][populate]=*&populate[header][populate]=*&populate[reviews][populate][reviews][populate]=*",
+        "url": "https://cms.runday.us/api/docs",
         "method": "GET",
         "sortNum": 0,
         "created": "2024-10-21T12:49:48.799Z",
-        "modified": "2024-10-23T12:02:40.344Z",
+        "modified": "2024-10-28T10:15:29.087Z",
+        "headers": [],
+        "auth": {
+            "type": "bearer",
+            "bearer": "e9bc1bf1783f2a022a2e407495f8f1b803a5e9b8bad4959995afae7aaf942f8fea20eb52e548c066a3c705d3cd806059e3f1bd9ffa6711d84df3ce4575ec0d72269154c6b47307420170dd059c70c7a31859884b2631eda9765382731447fabd365eabc65009f73f8c55aef5b2fc8f29da2f103331274d58c58f73ce8ebb7356"
+        }
+    },
+    {
+        "_id": "6522b099-543e-41ef-9d64-f5f89ce702e7",
+        "colId": "history",
+        "containerId": "",
+        "name": "https://cms.runday.us/api/home Copy",
+        "url": "https://cms.runday.us/api/clients-page?populate[reviews][populate][reviews][populate]=*&populate[clients]=*",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2024-10-21T12:49:48.799Z",
+        "modified": "2024-11-08T14:24:05.470Z",
         "headers": [],
         "params": [
             {
@@ -20,21 +36,81 @@
             {
                 "name": "populate[features][populate]",
                 "value": "*",
+                "isDisabled": true,
                 "isPath": false
             },
             {
                 "name": "populate[kpi][populate]",
                 "value": "*",
+                "isDisabled": true,
                 "isPath": false
             },
             {
                 "name": "populate[header][populate]",
                 "value": "*",
+                "isDisabled": true,
                 "isPath": false
             },
             {
                 "name": "populate[reviews][populate][reviews][populate]",
                 "value": "*",
+                "isPath": false
+            },
+            {
+                "name": "populate[clients]",
+                "value": "*",
+                "isPath": false
+            }
+        ],
+        "auth": {
+            "type": "bearer",
+            "bearer": "e9bc1bf1783f2a022a2e407495f8f1b803a5e9b8bad4959995afae7aaf942f8fea20eb52e548c066a3c705d3cd806059e3f1bd9ffa6711d84df3ce4575ec0d72269154c6b47307420170dd059c70c7a31859884b2631eda9765382731447fabd365eabc65009f73f8c55aef5b2fc8f29da2f103331274d58c58f73ce8ebb7356"
+        }
+    },
+    {
+        "_id": "4dbf79e2-d73e-47bb-99fc-c48f95ff2815",
+        "colId": "history",
+        "containerId": "",
+        "name": "https://cms.runday.us/api/home Copy Copy",
+        "url": "https://cms.runday.us/api/blogs?populate=*&pagination[pageSize]=100",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2024-10-21T12:49:48.799Z",
+        "modified": "2024-11-14T13:28:20.823Z",
+        "headers": [],
+        "params": [
+            {
+                "name": "populate[reviews][populate]",
+                "value": "*",
+                "isDisabled": true,
+                "isPath": false
+            },
+            {
+                "name": "populate[features][populate]",
+                "value": "*",
+                "isDisabled": true,
+                "isPath": false
+            },
+            {
+                "name": "populate[kpi][populate]",
+                "value": "*",
+                "isDisabled": true,
+                "isPath": false
+            },
+            {
+                "name": "populate[header][populate]",
+                "value": "*",
+                "isDisabled": true,
+                "isPath": false
+            },
+            {
+                "name": "populate",
+                "value": "*",
+                "isPath": false
+            },
+            {
+                "name": "pagination[pageSize]",
+                "value": "100",
                 "isPath": false
             }
         ],

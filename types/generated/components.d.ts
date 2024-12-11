@@ -238,6 +238,18 @@ export interface ComponentsClientCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsBenefits extends Struct.ComponentSchema {
+  collectionName: 'components_components_benefits';
+  info: {
+    displayName: 'benefits';
+  };
+  attributes: {
+    icon: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
 export interface ComponentsAboutPageCards extends Struct.ComponentSchema {
   collectionName: 'components_components_about_page_cards';
   info: {
@@ -271,6 +283,7 @@ declare module '@strapi/strapi' {
       'components.feature-card': ComponentsFeatureCard;
       'components.feature-card-section': ComponentsFeatureCardSection;
       'components.client-card': ComponentsClientCard;
+      'components.benefits': ComponentsBenefits;
       'components.about-page-cards': ComponentsAboutPageCards;
     }
   }

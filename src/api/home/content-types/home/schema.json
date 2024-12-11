@@ -35,6 +35,12 @@
       "repeatable": false,
       "component": "components.kpi-section",
       "required": true
+    },
+    "benefit": {
+      "displayName": "benefits",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.benefits"
     }
   }
 }
