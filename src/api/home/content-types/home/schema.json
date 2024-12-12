@@ -36,11 +36,11 @@
       "component": "components.kpi-section",
       "required": true
     },
-    "benefit": {
-      "displayName": "benefits",
+    "benefits": {
+      "displayName": "home_page_benefits",
       "type": "component",
-      "repeatable": true,
-      "component": "components.benefits"
+      "repeatable": false,
+      "component": "components.home-page-benefits"
     }
   }
 }

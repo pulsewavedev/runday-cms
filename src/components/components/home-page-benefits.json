@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_components_home_page_benefits",
+  "info": {
+    "displayName": "home_page_benefits"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "benefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.benefits",
+      "required": true
+    }
+  }
+}

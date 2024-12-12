@@ -170,6 +170,18 @@ export interface ComponentsKpiCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsHomePageBenefits extends Struct.ComponentSchema {
+  collectionName: 'components_components_home_page_benefits';
+  info: {
+    displayName: 'home_page_benefits';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    benefits: Schema.Attribute.Component<'components.benefits', true> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface ComponentsHeaderTitleLine1 extends Struct.ComponentSchema {
   collectionName: 'components_components_header_title_line_1s';
   info: {
@@ -184,6 +196,8 @@ export interface ComponentsHeaderTitleLine1 extends Struct.ComponentSchema {
       Schema.Attribute.Required;
     header_title_line_1: Schema.Attribute.String & Schema.Attribute.Required;
     header_try_now_title: Schema.Attribute.String;
+    header_image_url: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://assets.runday.us/new-hero.webp'>;
   };
 }
 
@@ -279,6 +293,7 @@ declare module '@strapi/strapi' {
       'components.logo-wall-item': ComponentsLogoWallItem;
       'components.kpi-section': ComponentsKpiSection;
       'components.kpi-card': ComponentsKpiCard;
+      'components.home-page-benefits': ComponentsHomePageBenefits;
       'components.header-title-line-1': ComponentsHeaderTitleLine1;
       'components.feature-card': ComponentsFeatureCard;
       'components.feature-card-section': ComponentsFeatureCardSection;

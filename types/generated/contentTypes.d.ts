@@ -666,7 +666,10 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       Schema.Attribute.Required;
     kpi: Schema.Attribute.Component<'components.kpi-section', false> &
       Schema.Attribute.Required;
-    benefit: Schema.Attribute.Component<'components.benefits', true>;
+    benefits: Schema.Attribute.Component<
+      'components.home-page-benefits',
+      false
+    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

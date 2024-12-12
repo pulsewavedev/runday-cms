@@ -25,6 +25,10 @@
     },
     "header_try_now_title": {
       "type": "string"
+    },
+    "header_image_url": {
+      "type": "string",
+      "default": "https://assets.runday.us/new-hero.webp"
     }
   }
 }
