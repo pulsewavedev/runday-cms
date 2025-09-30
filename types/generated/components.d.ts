@@ -77,6 +77,10 @@ export interface ComponentsReviewCard extends Struct.ComponentSchema {
       >;
     review: Schema.Attribute.Component<'components.review-detail-card', false> &
       Schema.Attribute.Required;
+    override_image: Schema.Attribute.Component<
+      'components.override-image',
+      false
+    >;
   };
 }
 
@@ -111,6 +115,18 @@ export interface ComponentsPricingCard extends Struct.ComponentSchema {
     button_text: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Talk to Sales'>;
+  };
+}
+
+export interface ComponentsOverrideImage extends Struct.ComponentSchema {
+  collectionName: 'components_components_override_images';
+  info: {
+    displayName: 'override_image';
+    description: '';
+  };
+  attributes: {
+    image_url: Schema.Attribute.String;
+    mobile_url: Schema.Attribute.String;
   };
 }
 
@@ -242,6 +258,7 @@ export interface ComponentsClientCard extends Struct.ComponentSchema {
   collectionName: 'components_components_client_cards';
   info: {
     displayName: 'client_card';
+    description: '';
   };
   attributes: {
     image_url: Schema.Attribute.String &
@@ -249,6 +266,7 @@ export interface ComponentsClientCard extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'https://placehold.co/386x330.png'>;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
+    mobile_url: Schema.Attribute.String;
   };
 }
 
@@ -289,6 +307,7 @@ declare module '@strapi/strapi' {
       'components.review-card': ComponentsReviewCard;
       'components.pricing-feature': ComponentsPricingFeature;
       'components.pricing-card': ComponentsPricingCard;
+      'components.override-image': ComponentsOverrideImage;
       'components.logo-wall': ComponentsLogoWall;
       'components.logo-wall-item': ComponentsLogoWallItem;
       'components.kpi-section': ComponentsKpiSection;

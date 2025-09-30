@@ -1,7 +1,8 @@
 {
   "collectionName": "components_components_client_cards",
   "info": {
-    "displayName": "client_card"
+    "displayName": "client_card",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -17,6 +18,9 @@
     "description": {
       "type": "text",
       "required": true
+    },
+    "mobile_url": {
+      "type": "string"
     }
   }
 }
