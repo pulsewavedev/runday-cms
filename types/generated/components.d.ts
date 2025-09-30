@@ -75,8 +75,7 @@ export interface ComponentsReviewCard extends Struct.ComponentSchema {
         },
         number
       >;
-    review: Schema.Attribute.Component<'components.review-detail-card', false> &
-      Schema.Attribute.Required;
+    review: Schema.Attribute.Component<'components.review-detail-card', false>;
     override_image: Schema.Attribute.Component<
       'components.override-image',
       false
