@@ -17,7 +17,7 @@
       "type": "component",
       "repeatable": true,
       "component": "components.kpi-card",
-      "required": true,
+      "required": false,
       "max": 2,
       "min": 2
     },
