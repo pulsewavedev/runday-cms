@@ -67,7 +67,6 @@ export interface ComponentsReviewCard extends Struct.ComponentSchema {
     video_url: Schema.Attribute.String;
     image_url: Schema.Attribute.String;
     kpi: Schema.Attribute.Component<'components.kpi-card', true> &
-      Schema.Attribute.Required &
       Schema.Attribute.SetMinMax<
         {
           min: 2;
