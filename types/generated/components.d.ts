@@ -69,7 +69,6 @@ export interface ComponentsReviewCard extends Struct.ComponentSchema {
     kpi: Schema.Attribute.Component<'components.kpi-card', true> &
       Schema.Attribute.SetMinMax<
         {
-          min: 2;
           max: 2;
         },
         number
