@@ -18,8 +18,7 @@
       "repeatable": true,
       "component": "components.kpi-card",
       "required": false,
-      "max": 2,
-      "min": 2
+      "max": 2
     },
     "review": {
       "displayName": "review_detail_card",
