@@ -13,15 +13,11 @@
   "pluginOptions": {},
   "attributes": {
     "navigation_label": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "navigation_description": {
-      "type": "string",
-      "required": true
-    },
-    "navigation_href": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "header": {

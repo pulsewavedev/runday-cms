@@ -1,20 +1,21 @@
 {
   "collectionName": "components_components_solution_page_stories_items",
   "info": {
-    "displayName": "Solution_page_stories_items"
+    "displayName": "Solution_page_stories_items",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "title": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "description": {
-      "type": "string",
+      "type": "text",
       "required": true
     }
   }

@@ -13,10 +13,11 @@ export interface ComponentsSolutionPageStories extends Struct.ComponentSchema {
   collectionName: 'components_components_solution_page_stories';
   info: {
     displayName: 'Solution_page_stories';
+    description: '';
   };
   attributes: {
-    header_title_line_1: Schema.Attribute.String & Schema.Attribute.Required;
-    header_title_line_2: Schema.Attribute.String & Schema.Attribute.Required;
+    header_title_line_1: Schema.Attribute.Text & Schema.Attribute.Required;
+    header_title_line_2: Schema.Attribute.Text & Schema.Attribute.Required;
     items: Schema.Attribute.Component<
       'components.solution-page-stories-items',
       true
@@ -30,11 +31,12 @@ export interface ComponentsSolutionPageStoriesItems
   collectionName: 'components_components_solution_page_stories_items';
   info: {
     displayName: 'Solution_page_stories_items';
+    description: '';
   };
   attributes: {
-    image: Schema.Attribute.String & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    description: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
 
@@ -42,10 +44,11 @@ export interface ComponentsSolutionPageShowcase extends Struct.ComponentSchema {
   collectionName: 'components_components_solution_page_showcases';
   info: {
     displayName: 'Solution_page_showcase';
+    description: '';
   };
   attributes: {
-    header_title_line_1: Schema.Attribute.String & Schema.Attribute.Required;
-    header_title_line_2: Schema.Attribute.String & Schema.Attribute.Required;
+    header_title_line_1: Schema.Attribute.Text & Schema.Attribute.Required;
+    header_title_line_2: Schema.Attribute.Text & Schema.Attribute.Required;
     items: Schema.Attribute.Component<
       'components.solution-page-stories-items',
       true
@@ -57,13 +60,14 @@ export interface ComponentsSolutionPageHeader extends Struct.ComponentSchema {
   collectionName: 'components_components_solution_page_headers';
   info: {
     displayName: 'Solution_page_header';
+    description: '';
   };
   attributes: {
-    header_title_line_1: Schema.Attribute.String & Schema.Attribute.Required;
-    header_title_line_2: Schema.Attribute.String & Schema.Attribute.Required;
-    header_description: Schema.Attribute.String & Schema.Attribute.Required;
-    header_action_text: Schema.Attribute.String & Schema.Attribute.Required;
-    hero_image_url: Schema.Attribute.String & Schema.Attribute.Required;
+    header_title_line_1: Schema.Attribute.Text & Schema.Attribute.Required;
+    header_title_line_2: Schema.Attribute.Text & Schema.Attribute.Required;
+    header_description: Schema.Attribute.Text & Schema.Attribute.Required;
+    header_action_text: Schema.Attribute.Text & Schema.Attribute.Required;
+    hero_image_url: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
 

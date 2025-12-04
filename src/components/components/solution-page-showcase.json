@@ -1,16 +1,17 @@
 {
   "collectionName": "components_components_solution_page_showcases",
   "info": {
-    "displayName": "Solution_page_showcase"
+    "displayName": "Solution_page_showcase",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "header_title_line_1": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "header_title_line_2": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "items": {

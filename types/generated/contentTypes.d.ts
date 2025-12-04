@@ -746,9 +746,8 @@ export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    navigation_label: Schema.Attribute.String & Schema.Attribute.Required;
-    navigation_description: Schema.Attribute.String & Schema.Attribute.Required;
-    navigation_href: Schema.Attribute.String & Schema.Attribute.Required;
+    navigation_label: Schema.Attribute.Text & Schema.Attribute.Required;
+    navigation_description: Schema.Attribute.Text & Schema.Attribute.Required;
     header: Schema.Attribute.Component<
       'components.solution-page-header',
       false
