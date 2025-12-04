@@ -9,6 +9,64 @@ export interface ComponentsTitle extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface ComponentsSolutionPageStories extends Struct.ComponentSchema {
+  collectionName: 'components_components_solution_page_stories';
+  info: {
+    displayName: 'Solution_page_stories';
+  };
+  attributes: {
+    header_title_line_1: Schema.Attribute.String & Schema.Attribute.Required;
+    header_title_line_2: Schema.Attribute.String & Schema.Attribute.Required;
+    items: Schema.Attribute.Component<
+      'components.solution-page-stories-items',
+      true
+    > &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface ComponentsSolutionPageStoriesItems
+  extends Struct.ComponentSchema {
+  collectionName: 'components_components_solution_page_stories_items';
+  info: {
+    displayName: 'Solution_page_stories_items';
+  };
+  attributes: {
+    image: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ComponentsSolutionPageShowcase extends Struct.ComponentSchema {
+  collectionName: 'components_components_solution_page_showcases';
+  info: {
+    displayName: 'Solution_page_showcase';
+  };
+  attributes: {
+    header_title_line_1: Schema.Attribute.String & Schema.Attribute.Required;
+    header_title_line_2: Schema.Attribute.String & Schema.Attribute.Required;
+    items: Schema.Attribute.Component<
+      'components.solution-page-stories-items',
+      true
+    >;
+  };
+}
+
+export interface ComponentsSolutionPageHeader extends Struct.ComponentSchema {
+  collectionName: 'components_components_solution_page_headers';
+  info: {
+    displayName: 'Solution_page_header';
+  };
+  attributes: {
+    header_title_line_1: Schema.Attribute.String & Schema.Attribute.Required;
+    header_title_line_2: Schema.Attribute.String & Schema.Attribute.Required;
+    header_description: Schema.Attribute.String & Schema.Attribute.Required;
+    header_action_text: Schema.Attribute.String & Schema.Attribute.Required;
+    hero_image_url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ComponentsSectionHeader extends Struct.ComponentSchema {
   collectionName: 'components_components_section_headers';
   info: {
@@ -298,6 +356,10 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'components.title': ComponentsTitle;
+      'components.solution-page-stories': ComponentsSolutionPageStories;
+      'components.solution-page-stories-items': ComponentsSolutionPageStoriesItems;
+      'components.solution-page-showcase': ComponentsSolutionPageShowcase;
+      'components.solution-page-header': ComponentsSolutionPageHeader;
       'components.section-header': ComponentsSectionHeader;
       'components.reviews-section': ComponentsReviewsSection;
       'components.review-detail-card': ComponentsReviewDetailCard;

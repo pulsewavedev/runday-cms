@@ -734,6 +734,52 @@ export interface ApiPricingPagePricingPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiSolutionSolution extends Struct.CollectionTypeSchema {
+  collectionName: 'solutions';
+  info: {
+    singularName: 'solution';
+    pluralName: 'solutions';
+    displayName: 'Solution';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    navigation_label: Schema.Attribute.String & Schema.Attribute.Required;
+    navigation_description: Schema.Attribute.String & Schema.Attribute.Required;
+    navigation_href: Schema.Attribute.String & Schema.Attribute.Required;
+    header: Schema.Attribute.Component<
+      'components.solution-page-header',
+      false
+    > &
+      Schema.Attribute.Required;
+    stories: Schema.Attribute.Component<
+      'components.solution-page-stories',
+      false
+    > &
+      Schema.Attribute.Required;
+    showcase: Schema.Attribute.Component<
+      'components.solution-page-showcase',
+      false
+    > &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::solution.solution'
+    > &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTestTest extends Struct.SingleTypeSchema {
   collectionName: 'tests';
   info: {
@@ -1147,6 +1193,7 @@ declare module '@strapi/strapi' {
       'api::doc.doc': ApiDocDoc;
       'api::home.home': ApiHomeHome;
       'api::pricing-page.pricing-page': ApiPricingPagePricingPage;
+      'api::solution.solution': ApiSolutionSolution;
       'api::test.test': ApiTestTest;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;

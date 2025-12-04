@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_components_solution_page_showcases",
+  "info": {
+    "displayName": "Solution_page_showcase"
+  },
+  "options": {},
+  "attributes": {
+    "header_title_line_1": {
+      "type": "string",
+      "required": true
+    },
+    "header_title_line_2": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.solution-page-stories-items"
+    }
+  }
+}

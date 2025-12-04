@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solutions",
+  "info": {
+    "singularName": "solution",
+    "pluralName": "solutions",
+    "displayName": "Solution",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "navigation_label": {
+      "type": "string",
+      "required": true
+    },
+    "navigation_description": {
+      "type": "string",
+      "required": true
+    },
+    "navigation_href": {
+      "type": "string",
+      "required": true
+    },
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.solution-page-header",
+      "required": true
+    },
+    "stories": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.solution-page-stories",
+      "required": true
+    },
+    "showcase": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.solution-page-showcase",
+      "required": true
+    }
+  }
+}
